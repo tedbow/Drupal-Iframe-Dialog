@@ -29,6 +29,7 @@ class IFrameDialog extends FormBase {
       '#title' => $this->t('Path'),
       '#description' => $this->t('Enter url to open'),
       '#maxlength' => 64,
+      '#default_value' => '/admin/content',
       '#size' => 64,
     ];
     $form['#attached']['library'][] = 'iframe_dialog/drupal.iframe_dialog';
