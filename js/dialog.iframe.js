@@ -28,7 +28,7 @@
           return;
         }
         var path = $('#i-frame-dialog #edit-path').val();
-        var $dialog = $('<div id="drupal-offcanvas" class="ui-front"><iframe src="http://www.octo2.dev/d8_2_ux/' + path + '?_wrapper_format=dialog_html" /></div>').appendTo('body');
+        var $dialog = $('<div id="drupal-offcanvas" class="ui-front"><iframe id="iframe-dialog" src="http://www.octo2.dev/d8_2_ux/' + path + '?_wrapper_format=dialog_html" /></div>').appendTo('body');
         var dialogOptions = {
           'dialogClass':"ui-dialog-outside-in ui-dialog-offcanvas",
           'modal': false,
@@ -41,6 +41,10 @@
         };
         var dialog = Drupal.dialog($dialog.get(0), dialogOptions);
         dialog.show();
+        $('iframe').on('load', function () {
+          var iframeTitle = document.getElementById('iframe-dialog').contentDocument.title;
+          $('.ui-dialog-title').text(iframeTitle);
+        });
 
       });
     }
