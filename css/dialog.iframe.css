@@ -3,6 +3,6 @@
   width: 300px;
 }
 
-.ui-dialog-content {
-
+.ui-dialog .ui-dialog-content {
+  padding: 0px;
 }
