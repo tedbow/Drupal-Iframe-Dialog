@@ -28,7 +28,7 @@
           return;
         }
         var path = $('#i-frame-dialog #edit-path').val();
-        var $dialog = $('<div id="drupal-offcanvas" class="ui-front"><iframe src="http://www.octo2.dev/d8_2_ux/' + path + '?_wrapper_format=ajax" /></div>').appendTo('body');
+        var $dialog = $('<div id="drupal-offcanvas" class="ui-front"><iframe src="http://www.octo2.dev/d8_2_ux/' + path + '?_wrapper_format=dialog_html" /></div>').appendTo('body');
         var dialogOptions = {
           'dialogClass':"ui-dialog-outside-in ui-dialog-offcanvas",
           'modal': false,

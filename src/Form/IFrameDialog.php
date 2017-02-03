@@ -31,16 +31,13 @@ class IFrameDialog extends FormBase {
       '#maxlength' => 64,
       '#size' => 64,
     ];
-    $form['go'] = [
-      '#type' => 'submit',
-      '#title' => $this->t('Go'),
-    ];
     $form['#attached']['library'][] = 'iframe_dialog/drupal.iframe_dialog';
     $form['#attached']['library'][] = 'outside_in/drupal.off_canvas';
 
     $form['submit'] = [
-        '#type' => 'submit',
-        '#value' => t('Submit'),
+      '#type' => 'submit',
+      '#value' => t('Submit'),
+      '#description' => $this->t('Open dialog'),
     ];
 
     return $form;
