@@ -1,0 +1,11 @@
+drupal.iframe_dialog:
+  version: VERSION
+  js:
+    js/dialog.iframe.js: {}
+  css:
+    component:
+      css/dialog.iframe.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog

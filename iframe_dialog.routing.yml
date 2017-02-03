@@ -1,0 +1,9 @@
+
+iframe_dialog.i_frame_dialog:
+  path: '/iframe_dialog/form/i_frame_dialog'
+  defaults:
+    _form: '\Drupal\iframe_dialog\Form\IFrameDialog'
+    _title: 'IFrameDialog'
+  requirements:
+    _access: 'TRUE'
+  

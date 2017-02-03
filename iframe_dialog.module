@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains iframe_dialog.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function iframe_dialog_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the iframe_dialog module.
+    case 'help.page.iframe_dialog':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function iframe_dialog_theme() {
+  return [
+    'iframe_dialog' => [
+      'template' => 'iframe_dialog',
+      'render element' => 'children',
+    ],
+  ];
+}
